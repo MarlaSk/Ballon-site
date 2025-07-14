@@ -1,0 +1,115 @@
+.tour-card {
+    max-width: 34rem;
+    border-radius: 3px;
+
+    perspective: 150rem;
+    height: 520px;
+    position: relative;
+
+    &__side {
+        height: 520px;
+        transition: 1s all;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+
+
+        &--front {
+            background: white;
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+            background: linear-gradient(135deg, #c3956a 3.65%, #a14f03 100%);
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+
+    &__img {
+        background: url(../../img/tour-card1.png) center / cover no-repeat;
+        height: 24.5rem;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+        margin-bottom: 4.5rem;
+    }
+
+    &__title {
+        font-weight: 300;
+        font-size: 28px;
+        letter-spacing: 0.07em;
+        text-align: right;
+        color: white;
+        text-transform: uppercase;
+        position: absolute;
+        top: 17.7rem;
+        right: 0rem;
+    }
+
+    &__span {
+        background: linear-gradient(135deg, #c3956a 3.65%, #a14f03 100%);
+        padding: 1rem 2rem .3rem;
+
+
+        &--2 {
+            position: absolute;
+            top: 3.4rem;
+            right: 0;
+            padding-bottom: 1rem;
+        }
+    }
+
+    &__descr {
+        ul {
+            list-style: none;
+
+            li {
+                font-weight: 700;
+                font-size: 16px;
+                letter-spacing: 0.12em;
+                text-decoration-skip-ink: none;
+                margin-bottom: 2rem;
+                text-align: center;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__backSide-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 0.12em;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 8.7rem;
+    }
+
+    &__price {
+        font-weight: 500;
+        font-size: 60px;
+        letter-spacing: 0.03em;
+        color: #fff;
+        margin-bottom: 8rem;
+        text-align: center;
+    }
+
+    &__btn {
+    left: 35%;
+    }
+}

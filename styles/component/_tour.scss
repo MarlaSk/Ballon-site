@@ -1,0 +1,11 @@
+.tour {
+    padding: 8.5rem 0;
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 8rem;
+    }
+
+    
+}
